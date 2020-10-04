@@ -108,3 +108,11 @@ img {
     width: 100%;
     height: auto;
 }
+
+#photo-file {
+    display: none;
+}
+
+#photo-preview {
+    margin: .8rem 0;
+}
