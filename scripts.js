@@ -1,4 +1,5 @@
 const photoFile = document.getElementById('photo-file');
+let image = document.getElementById('photo-preview');
 
 
 document.getElementById('select-image')
@@ -15,9 +16,26 @@ window.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(file);
         //carregando a imagem
         reader.onload = function(event) {
-            let image = document.getElementById('photo-preview');
+            
             //pegando o resultado do alvo(reader) e coloca no src
             image.src = event.target.result
         }
     })
 }) 
+
+// Selection tool
+
+const events = {
+    mouseover(){
+        this.style.cursor = 'crosshair'
+    },
+    mousedown(){},
+    mousemove(){},
+    mouseup(){}
+}
+//keys pega as chaves de um objeto
+Object.keys(events)
+.forEach((eventName) => {  
+    //addEventListener(mouseover , events.mouseover)
+    image.addEventListener(eventName , events[eventName]  )
+})
