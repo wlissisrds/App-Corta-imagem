@@ -121,9 +121,12 @@ img {
     position: fixed;
     display: none;
 
-    border: 2px dashed var(--green);
+    border: 2px dashed rgb(57, 201, 29);
     /*top: 0;
     left: 0;
     width: 200px;
     height: 200px;*/
+}
+#crop-image {
+    display: none;
 }
